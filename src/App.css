@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  padding-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .App-logo {
@@ -33,12 +34,13 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 .form-container {
-  max-width: 600px; 
+  max-width: 600px;
   margin: auto;
 }

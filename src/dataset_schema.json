@@ -1,0 +1,254 @@
+{
+    "title": "Edit Metadata",
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string",
+            "title": "Title"
+        },
+        "abstract": {
+            "type": "string",
+            "title": "Abstract"
+        },
+        "purpose": {
+            "type": "string",
+            "title": "Purpose"
+        },
+        "owner": {
+            "type": "string",
+            "title": "Owner",
+            "oneOf": [
+                {
+                    "const": "admin",
+                    "title": "Admin"
+                }
+            ]
+        },
+        "date": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "date_type": {
+            "type": "string",
+            "title": "Date type",
+            "description": "Identification of when a given event occured",
+            "enum": [
+                "publication",
+                "creation",
+                "revision"
+            ],
+            "enumNames": [
+                "Publication",
+                "Creation",
+                "Revision"
+            ]
+        },
+        "edition": {
+            "type": "string",
+            "title": "Edition",
+            "description": "Version of the cited resource"
+        },
+        "attribution": {
+            "type": "string",
+            "title": "Attribution",
+            "description": "Authority of function assigned, as to a ruler, legislative assembly, delegate, or the like"
+        },
+        "doi": {
+            "type": "string",
+            "title": "DOI",
+            "description": "a DOI will be added by Admin before publication"
+        },
+        "maintenance_frequency": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "enum": [
+                "unknown",
+                "continual",
+                "notPlanned",
+                "daily",
+                "annually",
+                "asNeeded",
+                "monthly",
+                "fortnightly",
+                "irregular",
+                "weekly",
+                "biannually",
+                "quarterly"
+            ],
+            "enumNames": [
+                "frequency of maintenance for the data is not known",
+                "data is repeatedly and frequently updated",
+                "there are no plans to update the data",
+                "data is updated each day",
+                "data is updated every year",
+                "data is updated as deemed necessary",
+                "data is updated each month",
+                "data is updated every two weeks",
+                "data is updated in intervals that are uneven in duration",
+                "data is updated on a weekly basis",
+                "data is updated twice each year",
+                "data is updated every three months"
+            ],
+            "default": "unknown",
+            "title": "Maintenance frequency",
+            "description": "Frequency with which modifications and deletions are made to the data after it's first produced"
+        },
+        "free_text_keywords": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "title": "Free-text Keywords",
+            "uniqueItems": true,
+            "description": "A space or comm-separated list of keywords. Use the widget to select from a hierarchial tree"
+        },
+        "regions": {
+            "type": "array",
+            "title": "Regions",
+            "items": {
+                "type": "string"
+            },
+            "uniqueItems": true
+        },
+        "restrictions": {
+            "type": "string",
+            "title": "Restrictions",
+            "description": "Limitation(s) place upon the access or use of the data",
+            "enum": [
+                "formal permission to do something"
+            ]
+        },
+        "other_constraints": {
+            "type": "string",
+            "title": "Other constraints"
+        },
+        "license": {
+            "type": "string",
+            "title": "License",
+            "description": "license of the dataset",
+            "enum": [
+                "Not Specified"
+            ]
+        },
+        "language": {
+            "type": "string",
+            "title": "Lnaguage",
+            "description": "language used within the dataset",
+            "enum": [
+                "English",
+                "German"
+            ]
+        },
+        "spatial_representation_type": {
+            "type": "string",
+            "title": "Spatial representation type",
+            "description": "method used to represent the geographic information in the dataset",
+            "enum": [
+                null,
+                "triangulated irregular network"
+            ],
+            "default": null
+        },
+        "temporal_extent_start": {
+            "type": "string",
+            "title": "temporal extent start",
+            "format": "date-time"
+        },
+        "temporal_extent_end": {
+            "type": "string",
+            "title": "temporal extent end",
+            "format": "date-time"
+        },
+        "supplemental_information": {
+            "type": "string",
+            "title": "Supplemental information"
+        },
+        "data_quality_statement": {
+            "type": "string",
+            "title": "Data quality statement"
+        },
+        "group": {
+            "type": "string",
+            "title": "Group",
+            "enum": [
+                "registered-members",
+                "contributors",
+                "anonymous"
+            ]
+        },
+        "metadata_aploaded_preserve": {
+            "type": "boolean",
+            "title": "Metadata Aploaded Preserve"
+        },
+        "featured": {
+            "type": "boolean",
+            "title": "Metadata Aploaded Preserve",
+            "description": "Should this resource be advertised in home page?"
+        },
+        "is_published": {
+            "type": "boolean",
+            "title": "Is Published",
+            "description": "Should this resource be published and serachable?"
+        },
+        "approved": {
+            "type": "boolean",
+            "title": "Approved",
+            "description": "Is this resource validated from a publisher or editor?"
+        },
+        "thumbnail_url": {
+            "type": "string",
+            "title": "Thumbnail url"
+        },
+        "thumbnail_url_path": {
+            "type": "string",
+            "title": "Thumbnail path"
+        },
+        "sourcetype": {
+            "type": "string",
+            "title": "Sourcetype"
+        },
+        "metadata": {
+            "type": "boolean",
+            "title": "Metadata",
+            "description": "If true, will be excluded from search"
+        },
+        "extra_metadata": {
+            "type": "string",
+            "title": "Extra Metadata",
+            "description": "Additional metadata, must be in format [{\"metadata_key\": \"metadata_value\"}, {\"metadata_key\": \"metadata_value\"}]"
+        },
+        "typename": {
+            "type": "string",
+            "title": "Typename"
+        },
+        "is_mosaic": {
+            "type": "boolean",
+            "title": "Is mosaic?"
+        },
+        "has_time": {
+            "type": "boolean",
+            "title": "Has time?"
+        },
+        "has_elevation": {
+            "type": "boolean",
+            "title": "Has elevation?"
+        },
+        "Time_regex": {
+            "type": "string",
+            "title": "Time regex",
+            "enum": [
+                "YYYYMMDD"
+            ]
+        },
+        "elevation_regex": {
+            "type": "string",
+            "title": "Elevation regex"
+        },
+        "ptype": {
+            "type": "string",
+            "title": "Ptype"
+        }
+    }
+}

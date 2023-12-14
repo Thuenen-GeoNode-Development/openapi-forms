@@ -1,0 +1,40 @@
+{
+    "abstract": {
+        "ui:widget": "textarea"
+    },
+    "purpose": {
+        "ui:widget": "textarea"
+    },
+    "maintenance_frequency": {
+        "ui:widget": "select"
+    },
+    "free_text_keywords": {
+        "ui:widget": "MultiSelect",
+        "ui:options": {
+            "options": [
+                "1"
+            ]
+        }
+    },
+    "regions": {
+        "ui:widget": "MultiSelect"
+    },
+    "restrictions": {
+        "ui:widget": "select"
+    },
+    "other_constraints": {
+        "ui:widget": "textarea"
+    },
+    "supplemental_information": {
+        "ui:widget": "textarea"
+    },
+    "data_quality_statement": {
+        "ui:widget": "textarea"
+    },
+    "thumbnail_url": {
+        "ui:widget": "textarea"
+    },
+    "thumbnail_url_path": {
+        "ui:widget": "textarea"
+    }
+}

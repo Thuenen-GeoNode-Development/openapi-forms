@@ -1,4 +1,4 @@
-"Dataset": {
+{
     "type": "object",
     "description": "DREST-compatible model-based serializer.",
     "properties": {
