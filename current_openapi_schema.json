@@ -1,0 +1,481 @@
+"Dataset": {
+    "type": "object",
+    "description": "DREST-compatible model-based serializer.",
+    "properties": {
+        "pk": {
+            "type": "string",
+            "readOnly": true
+        },
+        "uuid": {
+            "type": "string",
+            "readOnly": true
+        },
+        "name": {
+            "type": "string",
+            "readOnly": true
+        },
+        "attribute_set": {
+            "type": "object",
+            "properties": {
+                "pk": {
+                    "type": "integer"
+                },
+                "attribute": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string",
+                    "nullable": true
+                },
+                "attribute_label": {
+                    "type": "string",
+                    "nullable": true
+                },
+                "attribute_type": {
+                    "type": "string"
+                },
+                "visible": {
+                    "type": "boolean"
+                },
+                "display_order": {
+                    "type": "integer"
+                },
+                "featureinfo_type": {
+                    "type": "string"
+                },
+                "count": {
+                    "type": "integer"
+                },
+                "min": {
+                    "type": "string"
+                },
+                "max": {
+                    "type": "string"
+                },
+                "average": {
+                    "type": "string"
+                },
+                "median": {
+                    "type": "string"
+                },
+                "stddev": {
+                    "type": "string"
+                },
+                "sum": {
+                    "type": "string"
+                },
+                "unique_values": {
+                    "type": "string"
+                },
+                "last_stats_updated": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            },
+            "readOnly": true,
+            "nullable": true
+        },
+        "charset": {
+            "type": "string",
+            "readOnly": true
+        },
+        "is_mosaic": {
+            "type": "boolean",
+            "title": "Is mosaic?"
+        },
+        "has_time": {
+            "type": "boolean",
+            "title": "Has time?"
+        },
+        "has_elevation": {
+            "type": "boolean",
+            "title": "Has elevation?"
+        },
+        "time_regex": {
+            "nullable": true,
+            "oneOf": [
+                {
+                    "$ref": "#/components/schemas/TimeRegexEnum"
+                },
+                {
+                    "$ref": "#/components/schemas/BlankEnum"
+                },
+                {
+                    "$ref": "#/components/schemas/NullEnum"
+                }
+            ]
+        },
+        "elevation_regex": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 128
+        },
+        "featureinfo_custom_template": {
+            "type": "string"
+        },
+        "ows_url": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true,
+            "description": "The URL of the OWS service providing this layer, if any exists.",
+            "maxLength": 200
+        },
+        "capabilities_url": {
+            "type": "string",
+            "readOnly": true
+        },
+        "dataset_ows_url": {
+            "type": "string",
+            "readOnly": true
+        },
+        "workspace": {
+            "type": "string",
+            "readOnly": true
+        },
+        "store": {
+            "type": "string",
+            "readOnly": true
+        },
+        "subtype": {
+            "type": "string",
+            "nullable": true,
+            "maxLength": 128
+        },
+        "ptype": {
+            "type": "string",
+            "title": "P-Type",
+            "maxLength": 255
+        },
+        "resource_type": {
+            "type": "string"
+        },
+        "polymorphic_ctype_id": {
+            "type": "string",
+            "readOnly": true
+        },
+        "poc": {
+            "type": "string",
+            "readOnly": true
+        },
+        "metadata_author": {
+            "type": "string",
+            "readOnly": true
+        },
+        "title": {
+            "type": "string"
+        },
+        "abstract": {
+            "type": "string"
+        },
+        "attribution": {
+            "type": "string"
+        },
+        "doi": {
+            "type": "string"
+        },
+        "alternate": {
+            "type": "string",
+            "readOnly": true
+        },
+        "date": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "date_type": {
+            "type": "string"
+        },
+        "temporal_extent_start": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "temporal_extent_end": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "edition": {
+            "type": "string"
+        },
+        "purpose": {
+            "type": "string"
+        },
+        "maintenance_frequency": {
+            "type": "string"
+        },
+        "constraints_other": {
+            "type": "string"
+        },
+        "language": {
+            "type": "string"
+        },
+        "supplemental_information": {
+            "type": "string"
+        },
+        "data_quality_statement": {
+            "type": "string"
+        },
+        "bbox_polygon": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Polygon"
+                    ]
+                },
+                "coordinates": {
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "type": "number",
+                                "format": "float"
+                            },
+                            "example": [
+                                12.9721,
+                                77.5933
+                            ],
+                            "minItems": 2,
+                            "maxItems": 3
+                        },
+                        "example": [
+                            [
+                                22.4707,
+                                70.0577
+                            ],
+                            [
+                                12.9721,
+                                77.5933
+                            ]
+                        ],
+                        "minItems": 4
+                    },
+                    "example": [
+                        [
+                            [
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                50.0
+                            ],
+                            [
+                                50.0,
+                                50.0
+                            ],
+                            [
+                                50.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0
+                            ]
+                        ]
+                    ]
+                }
+            },
+            "readOnly": true
+        },
+        "ll_bbox_polygon": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "Polygon"
+                    ]
+                },
+                "coordinates": {
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "type": "number",
+                                "format": "float"
+                            },
+                            "example": [
+                                12.9721,
+                                77.5933
+                            ],
+                            "minItems": 2,
+                            "maxItems": 3
+                        },
+                        "example": [
+                            [
+                                22.4707,
+                                70.0577
+                            ],
+                            [
+                                12.9721,
+                                77.5933
+                            ]
+                        ],
+                        "minItems": 4
+                    },
+                    "example": [
+                        [
+                            [
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                50.0
+                            ],
+                            [
+                                50.0,
+                                50.0
+                            ],
+                            [
+                                50.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0
+                            ]
+                        ]
+                    ]
+                }
+            },
+            "readOnly": true
+        },
+        "srid": {
+            "type": "string"
+        },
+        "popular_count": {
+            "type": "string"
+        },
+        "share_count": {
+            "type": "string"
+        },
+        "rating": {
+            "type": "string"
+        },
+        "featured": {
+            "type": "boolean"
+        },
+        "is_published": {
+            "type": "boolean",
+            "readOnly": true
+        },
+        "is_approved": {
+            "type": "boolean",
+            "readOnly": true
+        },
+        "detail_url": {
+            "type": "string",
+            "readOnly": true
+        },
+        "created": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true
+        },
+        "last_updated": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true
+        },
+        "raw_abstract": {
+            "type": "string",
+            "readOnly": true
+        },
+        "raw_purpose": {
+            "type": "string",
+            "readOnly": true
+        },
+        "raw_constraints_other": {
+            "type": "string",
+            "readOnly": true
+        },
+        "raw_supplemental_information": {
+            "type": "string",
+            "readOnly": true
+        },
+        "raw_data_quality_statement": {
+            "type": "string",
+            "readOnly": true
+        },
+        "metadata_only": {
+            "type": "boolean"
+        },
+        "processed": {
+            "type": "boolean",
+            "readOnly": true
+        },
+        "state": {
+            "type": "string",
+            "readOnly": true
+        },
+        "sourcetype": {
+            "type": "string",
+            "readOnly": true
+        },
+        "embed_url": {
+            "type": "string"
+        },
+        "thumbnail_url": {
+            "type": "string",
+            "readOnly": true
+        },
+        "blob": {
+            "type": "object",
+            "additionalProperties": {},
+            "writeOnly": true
+        },
+        "is_copyable": {
+            "type": "boolean",
+            "readOnly": true
+        },
+        "download_url": {
+            "type": "string",
+            "readOnly": true
+        },
+        "favorite": {
+            "type": "string",
+            "readOnly": true
+        }
+    },
+    "required": [
+        "alternate",
+        "attribute_set",
+        "bbox_polygon",
+        "capabilities_url",
+        "charset",
+        "created",
+        "dataset_ows_url",
+        "detail_url",
+        "download_url",
+        "favorite",
+        "featureinfo_custom_template",
+        "is_approved",
+        "is_copyable",
+        "is_published",
+        "last_updated",
+        "ll_bbox_polygon",
+        "metadata_author",
+        "name",
+        "pk",
+        "poc",
+        "polymorphic_ctype_id",
+        "processed",
+        "raw_abstract",
+        "raw_constraints_other",
+        "raw_data_quality_statement",
+        "raw_purpose",
+        "raw_supplemental_information",
+        "sourcetype",
+        "state",
+        "store",
+        "thumbnail_url",
+        "title",
+        "uuid",
+        "workspace"
+    ]
+}

@@ -1,0 +1,229 @@
+{
+    "dataset": {
+        "pk": "2",
+        "uuid": "7c9d138e-4200-44cb-bbcd-5ed00664b01e",
+        "name": "nuts_rg_01m_2021_3035",
+        "attribute_set": [
+            {
+                "pk": 17,
+                "attribute": "nuts_name",
+                "description": null,
+                "attribute_label": null,
+                "attribute_type": "xsd:string",
+                "visible": true,
+                "display_order": 6,
+                "featureinfo_type": "type_property",
+                "count": 1,
+                "min": "NA",
+                "max": "NA",
+                "average": "NA",
+                "median": "NA",
+                "stddev": "NA",
+                "sum": "NA",
+                "unique_values": "NA",
+                "last_stats_updated": "2023-12-12T20:40:59.405070Z"
+            }
+        ],
+        "charset": "UTF-8",
+        "is_mosaic": false,
+        "has_time": false,
+        "has_elevation": false,
+        "time_regex": null,
+        "elevation_regex": null,
+        "featureinfo_custom_template": "<div style=\"overflow-x:hidden\"><div class=\"row\"><div class=\"col-xs-6\" style=\"font-weight: bold; word-wrap: break-word;\">added label:</div>                             <div class=\"col-xs-6\" style=\"word-wrap: break-word;\">${properties['ogc_fid']}</div></div><div class=\"row\"><div class=\"col-xs-6\" style=\"font-weight: bold; word-wrap: break-word;\">hahaha:</div>                             <div class=\"col-xs-6\" style=\"word-wrap: break-word;\">${properties['nuts_id']}</div></div><div class=\"row\"><div class=\"col-xs-6\" style=\"font-weight: bold; word-wrap: break-word;\">levl_code:</div>                             <div class=\"col-xs-6\" style=\"word-wrap: break-word;\">${properties['levl_code']}</div></div><div class=\"row\"><div class=\"col-xs-6\" style=\"font-weight: bold; word-wrap: break-word;\">cntr_code:</div>                             <div class=\"col-xs-6\" style=\"word-wrap: break-word;\">${properties['cntr_code']}</div></div><div class=\"row\"><div class=\"col-xs-6\" style=\"font-weight: bold; word-wrap: break-word;\">name_latn:</div>                             <div class=\"col-xs-6\" style=\"word-wrap: break-word;\">${properties['name_latn']}</div></div><div class=\"row\"><div class=\"col-xs-6\" style=\"font-weight: bold; word-wrap: break-word;\">nuts_name:</div>                             <div class=\"col-xs-6\" style=\"word-wrap: break-word;\">${properties['nuts_name']}</div></div><div class=\"row\"><div class=\"col-xs-6\" style=\"font-weight: bold; word-wrap: break-word;\">mount_type:</div>                             <div class=\"col-xs-6\" style=\"word-wrap: break-word;\">${properties['mount_type']}</div></div><div class=\"row\"><div class=\"col-xs-6\" style=\"font-weight: bold; word-wrap: break-word;\">urbn_type:</div>                             <div class=\"col-xs-6\" style=\"word-wrap: break-word;\">${properties['urbn_type']}</div></div><div class=\"row\"><div class=\"col-xs-6\" style=\"font-weight: bold; word-wrap: break-word;\">coast_type:</div>                             <div class=\"col-xs-6\" style=\"word-wrap: break-word;\">${properties['coast_type']}</div></div><div class=\"row\"><div class=\"col-xs-6\" style=\"font-weight: bold; word-wrap: break-word;\">fid:</div>                             <div class=\"col-xs-6\" style=\"word-wrap: break-word;\">${properties['fid']}</div></div></div>",
+        "ows_url": "http://172.17.0.1/geoserver/ows",
+        "capabilities_url": "http://172.17.0.1/geoserver/geonode/nuts_rg_01m_2021_3035/wms?service=wms&version=1.3.0&request=GetCapabilities",
+        "dataset_ows_url": "http://172.17.0.1/geoserver/geonode/nuts_rg_01m_2021_3035/ows",
+        "workspace": "geonode",
+        "default_style": {
+            "pk": 2,
+            "name": "nuts_rg_01m_2021_3035",
+            "workspace": "geonode",
+            "sld_title": "Default Polygon",
+            "sld_url": "http://172.17.0.1/geoserver/rest/workspaces/geonode/styles/nuts_rg_01m_2021_3035.sld"
+        },
+        "styles": [
+            {
+                "pk": 2,
+                "name": "nuts_rg_01m_2021_3035",
+                "workspace": "geonode",
+                "sld_title": "Default Polygon",
+                "sld_url": "http://172.17.0.1/geoserver/rest/workspaces/geonode/styles/nuts_rg_01m_2021_3035.sld"
+            }
+        ],
+        "store": "geonode_data",
+        "subtype": "vector",
+        "ptype": "gxp_wmscsource",
+        "resource_type": "dataset",
+        "polymorphic_ctype_id": "63",
+        "owner": {
+            "pk": 1000,
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "avatar": "https://www.gravatar.com/avatar/46d229b033af06a191ff2267bca9ae56/?s=240",
+            "is_superuser": true,
+            "is_staff": true,
+            "email": "admin@localhost",
+            "link": "http://172.17.0.1/api/v2/users/1000"
+        },
+        "poc": {
+            "pk": 1000,
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "avatar": "https://www.gravatar.com/avatar/46d229b033af06a191ff2267bca9ae56/?s=240",
+            "is_superuser": true,
+            "is_staff": true,
+            "email": "admin@localhost",
+            "link": "http://172.17.0.1/api/v2/users/1000"
+        },
+        "metadata_author": {
+            "pk": 1000,
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "avatar": "https://www.gravatar.com/avatar/46d229b033af06a191ff2267bca9ae56/?s=240",
+            "is_superuser": true,
+            "is_staff": true,
+            "email": "admin@localhost",
+            "link": "http://172.17.0.1/api/v2/users/1000"
+        },
+        "title": "nuts_rg_01m_2021_3035",
+        "abstract": "<p>now I have an abstract</p>",
+        "attribution": null,
+        "doi": null,
+        "alternate": "geonode:nuts_rg_01m_2021_3035",
+        "date": "2023-12-12T20:40:00Z",
+        "date_type": "publication",
+        "temporal_extent_start": null,
+        "temporal_extent_end": null,
+        "edition": null,
+        "purpose": "",
+        "maintenance_frequency": null,
+        "constraints_other": "",
+        "language": "eng",
+        "supplemental_information": "<p>No information provided</p>",
+        "data_quality_statement": "",
+        "bbox_polygon": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [
+                        -2824230.8134000003,
+                        -3076162.6068
+                    ],
+                    [
+                        -2824230.8134000003,
+                        6405005.3475
+                    ],
+                    [
+                        10026010.8334,
+                        6405005.3475
+                    ],
+                    [
+                        10026010.8334,
+                        -3076162.6068
+                    ],
+                    [
+                        -2824230.8134000003,
+                        -3076162.6068
+                    ]
+                ]
+            ]
+        },
+        "ll_bbox_polygon": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [
+                        -90.23528381409486,
+                        -29.85708214170704
+                    ],
+                    [
+                        -90.23528381409486,
+                        79.15047047071009
+                    ],
+                    [
+                        103.45691358201807,
+                        79.15047047071009
+                    ],
+                    [
+                        103.45691358201807,
+                        -29.85708214170704
+                    ],
+                    [
+                        -90.23528381409486,
+                        -29.85708214170704
+                    ]
+                ]
+            ]
+        },
+        "srid": "EPSG:3035",
+        "group": null,
+        "popular_count": "0",
+        "share_count": "0",
+        "rating": "0",
+        "featured": false,
+        "is_published": true,
+        "is_approved": true,
+        "detail_url": "http://172.17.0.1/catalogue/#/dataset/2",
+        "created": "2023-12-12T20:40:55.211093Z",
+        "last_updated": "2023-12-12T21:44:52.208630Z",
+        "raw_abstract": "now I have an abstract",
+        "raw_purpose": "",
+        "raw_constraints_other": "",
+        "raw_supplemental_information": "No information provided",
+        "raw_data_quality_statement": "",
+        "metadata_only": false,
+        "processed": true,
+        "state": "PROCESSED",
+        "sourcetype": "LOCAL",
+        "embed_url": "http://172.17.0.1/datasets/geonode:nuts_rg_01m_2021_3035/embed",
+        "thumbnail_url": "http://172.17.0.1/uploaded/thumbs/dataset-7c9d138e-4200-44cb-bbcd-5ed00664b01e-thumb-4de0eeed-7f5e-4f81-9422-b80d7e60dcdd.jpg",
+        "keywords": [],
+        "tkeywords": [],
+        "regions": [
+            {
+                "code": "GLO",
+                "name": "Global"
+            },
+            {
+                "code": "AFR",
+                "name": "Africa"
+            }
+        ],
+        "category": {
+            "identifier": "intelligenceMilitary"
+        },
+        "restriction_code_type": null,
+        "license": {
+            "identifier": "not_specified"
+        },
+        "spatial_representation_type": null,
+        "is_copyable": true,
+        "download_url": "http://172.17.0.1/datasets/geonode:nuts_rg_01m_2021_3035/dataset_download",
+        "favorite": false,
+        "link": "http://172.17.0.1/api/v2/datasets/2",
+        "perms": [
+            "download_resourcebase",
+            "view_resourcebase"
+        ],
+        "links": [
+            {
+                "extension": "xml",
+                "link_type": "metadata",
+                "name": "Atom",
+                "mime": "text/xml",
+                "url": "http://172.17.0.1/catalogue/csw?request=GetRecordById&service=CSW&version=2.0.2&id=7c9d138e-4200-44cb-bbcd-5ed00664b01e&outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&elementsetname=full"
+            },
+            {
+                "extension": "xml",
+                "link_type": "metadata",
+                "name": "DIF",
+                "mime": "text/xml",
+                "url": "http://172.17.0.1/catalogue/csw?request=GetRecordById&service=CSW&version=2.0.2&id=7c9d138e-4200-44cb-bbcd-5ed00664b01e&outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&elementsetname=full"
+            }
+        ]
+    }
+}

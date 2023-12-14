@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  padding-top: 100px;
 }
 
 .App-logo {
@@ -35,4 +36,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.form-container {
+  max-width: 600px; 
+  margin: auto;
 }
