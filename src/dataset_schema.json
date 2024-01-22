@@ -249,6 +249,27 @@
         "ptype": {
             "type": "string",
             "title": "Ptype"
+        },
+        "point_of_contanct": {
+            "type": "string",
+            "title": "Point of contact",
+            "enum": [
+                null
+            ]
+        },
+        "metadata_author": {
+            "type": "string",
+            "title": "Metadata author",
+            "enum": [
+                null
+            ]
+        },
+        "category": {
+            "type": "string",
+            "title": "Category",
+            "enum": [
+                null
+            ]
         }
     }
 }
